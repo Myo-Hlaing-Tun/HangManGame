@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/picture.css"/>
+    <script src="angular.min.js"></script>
+    <title>Hang Man</title>
+</head>
+<body ng-app="myApp" ng-controller="myController" ng-init="init()">
+    <div class="responsive">
+        <div class="bottom"></div>
+        <div class="up"></div>
+        <div class="cross"></div>
+        <div class="topbar"></div>
+        <div class="hangbar"></div>
+        <div class="head"></div>
+        <div class="rhand"></div>
+        <div class="lhand"></div>
+        <div class="body"></div>
+        <div class="rleg"></div>
+        <div class="lleg"></div>
+    </div>
+    <div class="responsive">
+        <h1 class="gameName" ng-show="!startGame && !winning && guesses != 0">H_NGM_N</h1>
+        <button class="startBtn" ng-show="!startGame && !winning && guesses != 0" ng-click="random()">Start Game</button>
+        <div ng-show="startGame">
+            <p class="puzzle">Word to Guess: {{showWord}}</p>
+            <p class="remaining-puzzle">Guesses left: {{guesses}}</p>
+            <div class="keyboard" id="keyboard"></div>
+        </div>
+        <div ng-show="winning">
+            <p class="winner-msg">You Win!</p>
+            <button class="play-again" ng-click="init(); random();">Play Again</button>
+        </div>
+        <div ng-show="guesses == 0" class="lose">
+            <p class="loser-msg1">Game Over!</p>
+            <p class="loser-msg2">The correct word is {{randomWord}}</p>
+            <button class="play-again" ng-click="init(); random();">Play Again</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

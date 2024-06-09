@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.responsive{
+    display: inline-block;
+    width: 49%;
+    height: 100vh;
+    position: relative;
+}
+
+/* bottom bar */
+.bottom{
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    width: 30%;
+    height: 0.5%;
+    background-color: black;
+}
+/* end bottom bar */
+
+/* up pole */
+.up{
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+    width: 0.5%;
+    height: 65%;
+    background-color: black;
+}
+/* end up pole */
+
+/* cross bar */
+.cross{
+    position: absolute;
+    bottom: 68.2%;
+    left: 20%;
+    /* transform: translate(-50%,-50%); */
+    width: 0.5%;
+    height: 10%;
+    background-color: black;
+    transform: rotateZ(-135deg);
+    transform-origin: 50% 0;
+}
+/* end cross bar */
+
+/* bar at the top */
+.topbar{
+    position: absolute;
+    bottom: 85%;
+    left: 20%;
+    width: 25%;
+    height: 0.5%;
+    background-color: black;
+}
+/* end bar at the top */
+
+/* hang bar */
+.hangbar{
+    position: absolute;
+    bottom: 78%;
+    left: 45%;
+    width: 0.5%;
+    height: 7.5%;
+    background-color: black;
+}
+/* end of hang bar */
+
+/* head */
+.head{
+    position: absolute;
+    bottom: 63%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 16.5%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid black;
+}
+/* end head */
+
+/* body */
+.body{
+    position: absolute;
+    bottom: 43%;
+    left: 45%;
+    width: 0.5%;
+    height: 20%;
+    background-color: black;
+}
+/* end body */
+
+/* right hand */
+.rhand{
+    position: absolute;
+    bottom: 53%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 0.5%;
+    height: 10%;
+    background-color: black;
+    transform: rotate(45deg);
+    transform-origin: 50% 0;
+}
+/* end right hand */
+
+/* left hand */
+.lhand{
+    position: absolute;
+    bottom: 53%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 0.5%;
+    height: 10%;
+    background-color: black;
+    transform: rotate(-45deg);
+    transform-origin: 50% 0;
+}
+/* end left hand */
+.rleg{
+    position: absolute;
+    bottom: 33.3%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 0.5%;
+    height: 10%;
+    background-color: black;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+}
+/* right leg */
+
+/* end right leg */
+
+/* left leg */
+.lleg{
+    position: absolute;
+    bottom: 33.3%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 0.5%;
+    height: 10%;
+    background-color: black;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+}
+/* end left leg */
+
+/* game name */
+.gameName, .winner-msg{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 90%;
+    text-align: center;
+    transform: translateX(-50%);
+    letter-spacing: 15px;
+    font-size: 4rem;
+}
+/* end game name */
+
+/* start button */
+.startBtn, .play-again{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    display: inline-block;
+    padding: 1rem;
+}
+/* end start button */
+
+/* word to guess */
+.puzzle{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 90%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+/* end word to guess */
+
+/* remainder */
+.remaining-puzzle{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 90%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+/* end remainder */
+
+/* keyboard */
+.keyboard{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.keyboard button{
+    border: 1px solid black;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.keyboard button:hover{
+    background-color: gray;
+}
+/* end keyboard */
+
+/* loser message */
+.loser-msg1{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 90%;
+    text-align: center;
+    transform: translateX(-50%);
+    letter-spacing: 15px;
+    font-size: 2rem;
+}
+
+.loser-msg2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 90%;
+    text-align: center;
+    transform: translateX(-50%);
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+/* end loser msg */
+
+/* responsive */
+@media only screen and (max-width: 900px) {
+    .responsive {
+        display: block;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .gameName, .winner-msg{
+        font-size: 2rem;
+    }
+
+    .startBtn, .play-again{
+        font-size: 1.5rem;
+    }
+
+    .puzzle, .remaining-puzzle, .keyboard, .loser-msg1, .loser-msg2{
+        font-size: 1rem;
+    }
+
+    .puzzle{
+        top: 10%;
+    }
+
+    .remaining-puzzle{
+        top: 25%;
+    }
+
+    .keyboard button{
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+}
